@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+{{ super() }}
+<br><br><br>
+<div align=center>
+    <p>The occupation with the second highest average IQ is bouncer with : {{result[13]}}</p>
+<br>
+<table>
+    <thead><tr><th>Occupation ID</th><th>IQs</th></tr></thead>
+
+    <tbody>
+        {% for k, v in dict.items(result) %}
+        <tr><td>{{k}}</td><td>{{v}}</td></tr>
+        {% endfor %}
+    </tbody>
+</div>
+{% endblock %}

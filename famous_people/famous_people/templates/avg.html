@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+{{ super() }}
+<br><br><br>
+<div align=center>
+    <p>The mean of all estimated iq scores for politicians is: {{avg_res}}</p>
+<br>
+<table>
+    <thead><tr><th>IQs</th></tr></thead>
+
+    <tbody>
+        {% for iq in result %}
+        <tr><td>{{iq.estimated_iq_score}}</td></tr>
+        {% endfor %}
+    </tbody>
+</div>
+{% endblock %}

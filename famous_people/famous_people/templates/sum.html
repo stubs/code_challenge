@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+{{ super() }}
+<br><br><br>
+<div align=center>
+    <!--<p>The sum of all estimated iq scores from people from Germany is {{result}}.</p> -->
+    <p>The sum of all estimated iq scores from people from Germany is: {{sum_res}}</p>
+<br>
+<table>
+    <thead><tr><th>IQs</th></tr></thead>
+
+    <tbody>
+        {% for iq in result %}
+        <tr><td>{{iq.estimated_iq_score}}</td></tr>
+        {% endfor %}
+    </tbody>
+</div>
+{% endblock %}
